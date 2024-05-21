@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>swarm archive</title>
+        <link rel="stylesheet" href="swa_style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main_menu">
+                <img src="comet.gif"/>
+                <p><b>☾   swarm archive</b></p>
+                <p><i>swarm axes</i> is a collection of films that are circulated in synchronous, decentralized viewing-swarms, developed collectively by the <a href="https://soloshow.online">solo show online community</a>. you can read more about the swarm axes events <a href="https://soloshow.online/swarm">here</a>.</p><br>
+
+                <p>the <b>swarm archive</b> is open every month <b>around a full moon</b>.</p>
+                <p>today's moon illumination: <i><span id="moonlight"></span>%</i></p>
+                <br>
+
+                <div class="closed">
+                    <p><b>☾</b> the swarm archive is <b>closed.</b> check back later ♥</p><br>
+                </div>
+
+                <div class="open">
+                    <p><b>☾</b> the swarm archive is <b>open!</b> below is a selection of films from the swarm axes programme, made available by the contributing artists. click on one of them to change the channel ♥</p><br>
+                
+                    <button class="video_selector" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479');">「001」 em - fieldnotes/angelvision</button><br>
+                    <button class="video_selector" onclick="video('https://www.youtube.com/embed/Irs_lDqz8MI?si=-2oFOf4domUaMVYG');">「002」 test - video 2</button><br>
+                    <button class="video_selector" onclick="video('https://www.youtube.com/embed/9IBkG8E4qYc?si=qJEhE4Nqgygqxu55');">「003」 test - video 3</button><br>
+                    
+                </div>
+            </div>
+
+            <div class="play_window">
+                <iframe id="player" src=""></iframe>
+            </div>
+            
+        </div>
+
+        <img class="stars open" src="stars.gif"/>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script src="suncalc.min.js"></script>
+        <script src="swa_script.js"></script>
+        <script>
+            
+        </script>
+    </body>
+
+
+</html>

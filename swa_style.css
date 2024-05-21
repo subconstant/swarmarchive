@@ -1,0 +1,78 @@
+@keyframes shimmmerrr {
+    0%      {filter: blur(0.8px);}
+    25%      {filter: blur(0.5px);}
+    50%     {filter: blur(0.6px);}
+    75%      {filter: blur(0.7px);}
+    100%    {filter: blur(0.9px);}
+  }
+
+@keyframes shuffffle {
+    0%{ transform: translate(-2px, -1px)}
+    40%{ transform: translate(2px, 0px)}
+    60%{ transform: translate(-2px, 2px)}
+    100%{ transform: translate(-2px, -1px)}
+}
+
+body{
+    padding: 100px 200px 0 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    background: #fff;
+    color: black;
+}
+
+p, img, a, button {
+    animation-name: shimmmerrr;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+a { color: inherit; }
+
+.video_selector{
+    font-weight: bold;
+    padding: 10px;
+    background: none;
+    border: 1px dotted black;
+    margin: 0 0 10px 0;
+}
+
+.video_selector:hover{
+    animation-name: shuffffle;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main_menu{
+    flex: 40%;
+}
+
+.play_window{
+    flex: 60%;
+    padding: 50px;
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    align-self: flex-start;
+}
+
+#player{
+    width: 100%;
+    height: 50vh;
+    border: none;
+    display: block;
+}
+
+.stars{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
