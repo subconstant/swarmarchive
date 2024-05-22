@@ -1,4 +1,7 @@
-function video(x){ document.getElementById('player').src = x; }
+function video(x){
+    document.getElementById('player').style.display = 'block';
+    document.getElementById('player').src = x;
+}
 
 const moonlight = SunCalc.getMoonIllumination(new Date())['fraction'];
 //const moonlight = 0.7; // for testing

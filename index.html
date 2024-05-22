@@ -25,14 +25,17 @@
                 <div class="open">
                     <p><b>☾</b> the swarm archive is <b>open!</b> below is a selection of films from the swarm axes programme, made available by the contributing artists. click on one of them to change the channel ♥</p><br>
                 
-                    <button class="video_selector" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479');">「001」 em - fieldnotes/angelvision</button><br>
-                    <button class="video_selector" onclick="video('https://www.youtube.com/embed/Irs_lDqz8MI?si=-2oFOf4domUaMVYG');">「002」 test - video 2</button><br>
-                    <button class="video_selector" onclick="video('https://www.youtube.com/embed/9IBkG8E4qYc?si=qJEhE4Nqgygqxu55');">「003」 test - video 3</button><br>
+                    <a href="#play_window">
+                        <button class="video_selector" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479');">「001」 em - fieldnotes/angelvision</button><br>
+                        <button class="video_selector" onclick="video('https://www.youtube.com/embed/Irs_lDqz8MI?si=-2oFOf4domUaMVYG');">「002」 test - video 2</button><br>
+                        <button class="video_selector" onclick="video('https://player.bilibili.com/player.html?isOutside=true&aid=625783948&bvid=BV1vt4y1C7SL&cid=193754426&p=1');">「003」 test - video 3</button><br>
+                    </a>
+                    
                     
                 </div>
             </div>
 
-            <div class="play_window">
+            <div class="play_window" id="play_window">
                 <iframe id="player" src=""></iframe>
             </div>
             
