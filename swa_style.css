@@ -1,9 +1,9 @@
 @keyframes shimmmerrr {
-    0%      {filter: blur(0.8px);}
-    25%      {filter: blur(0.5px);}
-    50%     {filter: blur(0.6px);}
-    75%      {filter: blur(0.7px);}
-    100%    {filter: blur(0.9px);}
+    0%      {filter: blur(0.5px); -webkit-filter: blur(0.5px);}
+    25%      {filter: blur(0.2px); -webkit-filter: blur(0.5px);}
+    50%     {filter: blur(0.3px); -webkit-filter: blur(0.5px);}
+    75%      {filter: blur(0.4px); -webkit-filter: blur(0.5px);}
+    100%    {filter: blur(0.6px); -webkit-filter: blur(0.5px);}
   }
 
 @keyframes shuffffle {
@@ -14,14 +14,22 @@
 }
 
 body{
-    padding: 10vh 10vw 0 10vw;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    font-family: 'ＭＳ Ｐゴシック', 'MS PGothic', 'メイリオ', Meiryo, sans-serif;
     font-size: 11pt;
     background: #fff;
     color: black;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
 }
 
-p, img, a, button {
+* {
+    filter: blur(0.4px);
+    -webkit-filter: blur(0.4px) !important;
+}
+
+b, i, button {
     animation-name: shimmmerrr;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
@@ -29,12 +37,37 @@ p, img, a, button {
 
 a { color: inherit; }
 
+.topbar{
+    background: white;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px dotted black;
+    z-index: 3;
+}
+
+#fright{
+    display: none;
+    float: right;
+    margin-right: 30px;
+}
+
 .video_selector{
+    position: absolute;
+    font-size: 10px;
     font-weight: bold;
     padding: 10px;
-    background: none;
+    background: white;
     border: 1px dotted black;
     margin: 0 0 10px 0;
+    animation-name: shuffffle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .video_selector:hover{
@@ -44,45 +77,77 @@ a { color: inherit; }
     cursor: pointer;
 }
 
+.video_selector:nth-of-type(even){
+    animation-direction: reverse;
+}
+
+#return_button, #log_button, #repos_button{
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .container{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 10vh 10vw 0 10vw;
 }
 
 .main_menu{
-    flex: 40%;
-    padding-right: 50px;
+    max-width: 500px;
 }
 
 .play_window{
-    flex: 60%;
-    margin-bottom: 50px;
-    position: sticky;
-    position: -webkit-sticky;
-    align-self: flex-start;
-    width: 100%
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('angelframe.png');
+    background-size: 70vw 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    transition: 1s;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
 }
 
-@media (max-width: 1200px) {
-    .container{ flex-direction: column-reverse; }
-    .main_menu, .play_window { flex: 100%; }
+
+#log{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background: white;
+    border: 1px dotted black;
+    z-index: 1;
+    opacity: 0;
+    display: block;
+    transition: 1s;
+    pointer-events: none;
+    overflow-y: scroll;
 }
 
-
-#player{
-    width: 100%;
-    height: auto;
+#i_player, #v_player{
+    width: 100vw;
+    max-width: 45vw;
+    height: 50vh;
     min-height: 400px;
-    margin-top: 50px;
     border: none;
     display: none;
-    background: black;
+    background: none;
 }
 
 .stars{
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     z-index: -100;

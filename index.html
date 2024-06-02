@@ -5,43 +5,73 @@
         <title>swarm archive</title>
         <link rel="stylesheet" href="swa_style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script>
+            
+        </script>
     </head>
 
     <body>
-        <div class="container">
-            <div class="main_menu">
-                <img src="comet.gif"/>
-                <p><b>☾   swarm archive</b></p>
-                <p><i>swarm axes</i> is a collection of films that are circulated in synchronous, decentralized viewing-swarms, developed collectively by the <a href="https://soloshow.online">solo show online community</a>. you can read more about the swarm axes events <a href="https://soloshow.online/swarm">here</a>.</p><br>
-
-                <p>the <b>swarm archive</b> is open every month <b>around a full moon</b>.</p>
-                <p>today's moon illumination: <i><span id="moonlight"></span>%</i></p>
-                <br>
-
-                <div class="closed">
-                    <p><b>☾</b> the swarm archive is <b>closed.</b> check back later ♥</p><br>
-                </div>
-
-                <div class="open">
-                    <p><b>☾</b> the swarm archive is <b>open!</b> below is a selection of films from the swarm axes programme, made available by the contributing artists. click on one of them to change the channel ♥</p><br>
-                
-                    <a href="#play_window">
-                        <button class="video_selector" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479');">「001」 em - fieldnotes/angelvision</button><br>
-                        <button class="video_selector" onclick="video('https://www.youtube.com/embed/Irs_lDqz8MI?si=-2oFOf4domUaMVYG');">「002」 test - video 2</button><br>
-                        <button class="video_selector" onclick="video('https://player.bilibili.com/player.html?isOutside=true&aid=625783948&bvid=BV1vt4y1C7SL&cid=193754426&p=1');">「003」 test - video 3</button><br>
-                    </a>
-                    
-                    
-                </div>
-            </div>
-
-            <div class="play_window" id="play_window">
-                <iframe id="player" src=""></iframe>
-            </div>
-            
+        <div class="topbar open">
+            <b>☾ swarm archive</b>
+            &nbsp;|&nbsp;
+            moon: <i><span id="moonlight"></span>%</i>
+            / 90%
+            &nbsp;|&nbsp;
+            <button id="log_button" onclick="win(1,'log')">log</button>
+            &nbsp;|&nbsp;
+            <button id="repos_button" onclick="axes()">reposition</button>
+            <span id="fright">now watching... <b><span id="now_playing"></span></b>.
+            &nbsp;| <button id="return_button" onclick="back()">return</button></span>
         </div>
 
+        <div class="play_window" id="play_window">
+            <iframe id="i_player" src=""></iframe>
+            <video id="v_player" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="log" class="draggable">
+            <button id="log_button" style="float: right;" onclick="win(0,'log')">X</button><br>
+            <img src="air.gif" width="200px"/>
+            <p><b>☾ 2.6</b> - added <b>em - fieldnotes/angelvision</b></p>
+            <hr/>
+        </div>
+
+        <div class="container">
+
+            <div class="main_menu">
+                <img src="comet.gif"/>
+                <p class="closed"><b>☾   swarm archive</b></p>
+                <p><i>swarm axes</i> is a collection of films that are circulated in synchronous, decentralized viewing-swarms. <i>swarm archive</i> is its online counter-part. you can read more about the swarm axes irl events <a target="_blank" href="https://soloshow.online/swarm">here</a>.</p>
+                developed collectively by the <a target="_blank" href="https://soloshow.online">solo show online</a> and A~R~C~A~N~A community.
+                <br>
+
+                <p class="closed">
+                    the <i>swarm archive</i> is open every month <b>around a full moon</b>.<br>check back later ♥
+                </p>
+
+                <p class="open">the swarm archive is now <b>open!</b> ♥</p><br>              
+            </div>   
+        </div>
+
+        <button class="video_selector open" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','「001」 em - fieldnotes/angelvision', 'iframe');">「001」 em - fieldnotes/angelvision</button><br>
+        <button class="video_selector open" onclick="video('https://www.youtube.com/embed/Irs_lDqz8MI?si=-2oFOf4domUaMVYG','','iframe');">「002」 youtube video test</button><br>
+        
+        <button class="video_selector open" onclick="video('https://player.bilibili.com/player.html?isOutside=true&aid=625783948&bvid=BV1vt4y1C7SL&cid=193754426&p=1','','iframe');">「003」 bilibili video test</button><br>
+
+        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/17DP9irv94aRYe1Lv6H28e88K_XY4sZy5/preview','gdrive test','iframe');">「004」 gdrive test</button><br>
+
+        <button class="video_selector open" onclick="video('');">「000」 no video</button><br>
+
+        <button class="video_selector open" onclick="video('');">「000」 no video</button><br>
+
+        <button class="video_selector open" onclick="video('');">「000」 no video</button><br>
+
         <img class="stars open" src="stars.gif"/>
+        
         <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="suncalc.min.js"></script>
         <script src="swa_script.js"></script>
