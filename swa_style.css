@@ -48,6 +48,7 @@ a { color: inherit; }
     vertical-align: middle;
     border-bottom: 1px dotted black;
     z-index: 3;
+    transition: 1s;
 }
 
 #fright{
@@ -57,12 +58,18 @@ a { color: inherit; }
 }
 
 .video_selector{
+    height: 100px;
+    width: 100px;
+    background-image: url('dotheart.png');
+    background-color: transparent;
+    background-size: 100px 90px;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     font-size: 10px;
     font-weight: bold;
     padding: 10px;
-    background: white;
-    border: 1px dotted black;
+    border: none;
     margin: 0 0 10px 0;
     animation-name: shuffffle;
     animation-duration: 10s;
@@ -81,7 +88,7 @@ a { color: inherit; }
     animation-direction: reverse;
 }
 
-#return_button, #log_button, #repos_button{
+#return_button, #log_button, #map_button, #repos_button{
     background: none;
     border: none;
     padding: 0;
@@ -104,11 +111,11 @@ a { color: inherit; }
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('angelframe.png');
+    background-image: url('frames/frame\ \(10\).jpeg');
     background-size: 70vw 80vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: black;
     z-index: 2;
     opacity: 0;
     display: flex;
@@ -117,7 +124,6 @@ a { color: inherit; }
     justify-content: center;
     pointer-events: none;
 }
-
 
 #log{
     position: absolute;
@@ -128,13 +134,94 @@ a { color: inherit; }
     padding: 20px;
     background: white;
     border: 1px dotted black;
-    z-index: 1;
+    z-index: 3;
     opacity: 0;
     display: block;
     transition: 1s;
     pointer-events: none;
     overflow-y: scroll;
 }
+
+#map{
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    width: 600px;
+    height: 358px;
+    padding: 10px;
+    background-image: url('map.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px dotted black;
+    z-index: 3;
+    opacity: 0;
+    display: block;
+    transition: 1s;
+    pointer-events: none;
+    overflow-y: scroll;
+}
+
+#map_img{
+    width: inherit;
+}
+
+.dove{
+    position: relative;
+    cursor: pointer;
+}
+
+#us{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background: white;
+    border: 1px dotted black;
+    z-index: 10;
+    opacity: 0;
+    display: block;
+    transition: 1s;
+    pointer-events: none;
+    overflow-y: scroll;
+}
+
+#eu{
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background: white;
+    border: 1px dotted black;
+    z-index: 10;
+    opacity: 0;
+    display: block;
+    transition: 1s;
+    pointer-events: none;
+    overflow-y: scroll;
+}
+
+#aus{
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    background: white;
+    border: 1px dotted black;
+    z-index: 10;
+    opacity: 0;
+    display: block;
+    transition: 1s;
+    pointer-events: none;
+    overflow-y: scroll;
+}
+
+
 
 #i_player, #v_player{
     width: 100vw;

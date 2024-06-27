@@ -13,17 +13,19 @@
     </head>
 
     <body>
-        <div class="topbar open">
+        <div id="topbar" class="topbar open">
             <b>☾ swarm archive</b>
             &nbsp;|&nbsp;
             moon: <i><span id="moonlight"></span>%</i>
             / 90%
             &nbsp;|&nbsp;
-            <button id="log_button" onclick="win(1,'log')">log</button>
+            <button id="log_button" class="navlink" onclick="win(1,'log')">index</button>
             &nbsp;|&nbsp;
-            <button id="repos_button" onclick="axes()">reposition</button>
+            <button id="map_button" class="navlink" onclick="win(1,'map')">irl</button>
+            &nbsp;|&nbsp;
+            <button id="repos_button" class="navlink" onclick="axes()">reposition</button>
             <span id="fright">now watching... <b><span id="now_playing"></span></b>.
-            &nbsp;| <button id="return_button" onclick="back()">return</button></span>
+            &nbsp;| <button id="return_button" class="navlink" onclick="back()">return</button></span>
         </div>
 
         <div class="play_window" id="play_window">
@@ -36,8 +38,74 @@
         <div id="log" class="draggable">
             <button id="log_button" style="float: right;" onclick="win(0,'log')">X</button><br>
             <img src="air.gif" width="200px"/>
-            <p><b>☾ 2.6</b> - added <b>em - fieldnotes/angelvision</b></p>
+            <p><b>「001」</b> em - fieldnotes/angelvision</p>
+            <p><b>「002」</b> Lapo Sorride - Left Behind</p>
             <hr/>
+        </div>
+
+        <div id="map" class="draggable">
+            <button id="log_button" style="float: right;" onclick="win(0,'map')">X</button><br>
+            
+            <img class="dove" onclick="win(1,'us')" style="left: 170px;top: 80px;" src="dove.gif"/>
+            <img class="dove" onclick="win(1,'eu')" style="left: 250px;top: 120px;" src="dove.gif"/>
+            <img class="dove" onclick="win(1,'aus')" style="left: 410px;top: 30px;" src="dove.gif"/>
+        </div>
+
+        <div id="us" class="draggable">
+            <button id="log_button" style="float: right;" onclick="win(0,'us')">X</button><br>
+
+            <p><b>north america</b></p>
+            <hr/>
+            <p><b>「swarm 1」</b><br>NYC - August 11 2023<br>at Love Letter, 147 Thames st Brooklyn<br>hosted by <a href="https://www.instagram.com/loveletter_mag/">@loveletter_mag</a></p>
+
+            <p><b>「swarm 1」</b><br>Albuquerque - August 12 2023<br>at Off Center Arts, parking lot at 808 Park Ave SW, Albuquerque, NM<br>hosted by <a href="http://instagram.com/ssalt.lick">@ssalt.lick</a></p>
+
+            <hr />
+
+            <p><b>「swarm 2」</b><br>Montreal - October 12 2023<br>hosted by <a href="http://instagram.com/femcel_larper">@femcel_larper</a> + <a href="http://instagram.com/f0rmercultmember">@f0rmercultmember</a></p>
+        </div>
+
+        <div id="eu" class="draggable">
+            <button id="log_button" style="float: right;" onclick="win(0,'eu')">X</button><br>
+
+            <p><b>europe</b></p>
+            <hr/>
+            <p><b>「swarm 1」</b><br>Berlin - August 4 2023<br>hosted by <a href="http://instagram.com/sybil0">@sybil0</a> + <a href="http://instagram.com/madalinagaceanu">@madalinagaceanu</a></p>
+
+            <p><b>「swarm 1」</b><br>Bucharest - August 12 2023<br>at 8pt Alternative Space<br>hosted by <a href="http://instagram.com/anticatharsis">@anticatharsis</a> + <a href="http://instagram.com/chisdanmihai">@chisdanmihai</a> + <a href="http://instagram.com/giaa.energia">@giaa.energia</a></p>
+
+            <p><b>「swarm 1」</b><br>Porto - 2023<br>at Círculo Católico de Operários do Porto (CCOP), Rua Duque de Loulé 202, Porto<br>hosted by <a href="http://instagram.com/real_sandralub">@real_sandralub</a></p>
+
+            <hr />
+
+            <p><b>「swarm 2」</b><br>Bucharest - October 5 2023<br>at 8pt Alternative Space<br>hosted by <a href="http://instagram.com/anticatharsis">@anticatharsis</a> + <a href="http://instagram.com/chisdanmihai">@chisdanmihai</a> + <a href="http://instagram.com/giaa.energia">@giaa.energia</a></p>
+
+            <p><b>「swarm 2」</b><br>Berlin - October 8 2023<br>at Ä-STUBE Fuldastraße 46, 12045 Berlin<br>hosted by <a href="http://instagram.com/sybil0">@sybil0</a> + <a href="http://instagram.com/madalinagaceanu">@madalinagaceanu</a></p>
+        
+            <p><b>「swarm 2 + 1」</b><br>Porto - October 12-13 2023<br>at Círculo Católico de Operários do Porto (CCOP), Rua Duque de Loulé 202, Porto<br>hosted by <a href="http://instagram.com/real_sandralub">@real_sandralub</a></p>
+
+            <p><b>「swarm 2」</b><br>Ghent - October 14 2023<br>at  Wintercircus, Sint-Pietersnieuwstraat 11<br>hosted by <a href="http://instagram.com/@thomas_de_paepe_">@thomas_de_paepe_</a> + @thomas_buitenwereld</p>
+
+            <hr/>
+
+            <p><b>「swarm 3」</b><br>Enschede - November 15-19 2023<br>at Overkill Festival</p>
+
+            <p><b>「swarm 3」</b><br>Bucharest - December 10 2023<br>at 8pt Alternative Space<br>hosted by <a href="http://instagram.com/anticatharsis">@anticatharsis</a> + <a href="http://instagram.com/chisdanmihai">@chisdanmihai</a> + <a href="http://instagram.com/giaa.energia">@giaa.energia</a></p>
+
+            <p><b>「swarm 3」</b><br>Porto - December 15 2023<br>at Círculo Católico de Operários do Porto (CCOP), Rua Duque de Loulé 202, Porto<br>hosted by <a href="http://instagram.com/real_sandralub">@real_sandralub</a></p>
+
+        </div>
+
+        <div id="aus" class="draggable">
+            <button id="log_button" style="float: right;" onclick="win(0,'aus')">X</button><br>
+
+            <p><b>australia</b></p>
+
+            <hr/>
+            <p><b>「swarm 2」</b><br>Midland WA - October 8 + 14 2023<br>hosted by <a href="http://instagram.com/kswlilysm ">@kswlilysm</a></p>
+            <hr />
+            <p><b>「swarm 3」</b><br>Mandurah WA - December 22 2023<br>hosted by traumerei_key + <a href="http://instagram.com/catabasis.ilysm">@catabasis.ilysm</a></p>
+            
         </div>
 
         <div class="container">
@@ -57,18 +125,10 @@
             </div>   
         </div>
 
-        <button class="video_selector open" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','「001」 em - fieldnotes/angelvision', 'iframe');">「001」 em - fieldnotes/angelvision</button><br>
-        <button class="video_selector open" onclick="video('https://www.youtube.com/embed/Irs_lDqz8MI?si=-2oFOf4domUaMVYG','','iframe');">「002」 youtube video test</button><br>
-        
-        <button class="video_selector open" onclick="video('https://player.bilibili.com/player.html?isOutside=true&aid=625783948&bvid=BV1vt4y1C7SL&cid=193754426&p=1','','iframe');">「003」 bilibili video test</button><br>
+        <button class="video_selector open" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','「001」 em - fieldnotes/angelvision', 'iframe');">「001」</button><br>
 
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/17DP9irv94aRYe1Lv6H28e88K_XY4sZy5/preview','gdrive test','iframe');">「004」 gdrive test</button><br>
-
-        <button class="video_selector open" onclick="video('');">「000」 no video</button><br>
-
-        <button class="video_selector open" onclick="video('');">「000」 no video</button><br>
-
-        <button class="video_selector open" onclick="video('');">「000」 no video</button><br>
+    
+        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1Ls8bQbkkFLD8eHofSkjMTunWt6qH9gB7/preview','「002」 Lapo Sorride - Left Behind','iframe');">「002」</button><br>
 
         <img class="stars open" src="stars.gif"/>
         

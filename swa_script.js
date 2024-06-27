@@ -2,6 +2,14 @@ function video(x,y,z){
     document.getElementById('play_window').style.opacity = '1';
     document.getElementById('play_window').style.pointerEvents = 'all';
 
+    document.getElementById('topbar').style.background = 'black';
+    document.getElementById('topbar').style.color = 'white';
+    document.getElementById('topbar').style.borderColor = 'white';
+    document.querySelectorAll('.navlink').forEach(function(a){a.style.color = 'white'});
+
+    console.log('url("frames/frame (' + Math.round((Math.random() * 21) + 1) + ').jpeg")');
+    document.getElementById('play_window').style.backgroundImage = 'url("frames/frame (' + Math.round((Math.random() * 21) + 1) + ').jpeg")';
+
     if( z == 'iframe'){
         document.getElementById('i_player').style.display = 'block';
         document.getElementById('i_player').src = x;
@@ -25,6 +33,11 @@ function back(){
     document.getElementById('v_player').src = '';
 
     document.getElementById('fright').style.display = 'none';
+
+    document.getElementById('topbar').style.background = 'white';
+    document.getElementById('topbar').style.color = 'black';
+    document.getElementById('topbar').style.borderColor = 'black';
+    document.querySelectorAll('.navlink').forEach(function(a){a.style.color = 'black'});
 }
 
 function win(x,y){
