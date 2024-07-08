@@ -4,7 +4,7 @@
     50%     {filter: blur(0.3px); -webkit-filter: blur(0.5px);}
     75%      {filter: blur(0.4px); -webkit-filter: blur(0.5px);}
     100%    {filter: blur(0.6px); -webkit-filter: blur(0.5px);}
-  }
+}
 
 @keyframes shuffffle {
     0%{ transform: translate(-2px, -1px)}
@@ -35,7 +35,9 @@ b, i, button {
     animation-iteration-count: infinite;
 }
 
-a { color: inherit; }
+a { 
+    color: inherit; 
+}
 
 .topbar{
     background: white;
@@ -221,8 +223,6 @@ a { color: inherit; }
     overflow-y: scroll;
 }
 
-
-
 #i_player, #v_player{
     width: 100vw;
     max-width: 45vw;
@@ -238,4 +238,8 @@ a { color: inherit; }
     bottom: 20px;
     right: 20px;
     z-index: -100;
+}
+
+.draggable:active{
+    transition: none !important;
 }

@@ -65,7 +65,7 @@ function open(){
     document.body.style.color = "#00";
 }
 
-if(moonlight >= 0.90 || window.location.href.includes("?open") ){ open() } else { close() };
+if(0.90 >= 0.90 || window.location.href.includes("?open") ){ open() } else { close() };
 
 function axes(){
     document.querySelectorAll('.video_selector').forEach(function(x) {
