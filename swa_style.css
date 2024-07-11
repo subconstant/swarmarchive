@@ -221,8 +221,6 @@ a { color: inherit; }
     overflow-y: scroll;
 }
 
-
-
 #i_player, #v_player{
     width: 100vw;
     max-width: 45vw;
@@ -238,4 +236,9 @@ a { color: inherit; }
     bottom: 20px;
     right: 20px;
     z-index: -100;
+}
+
+.draggable:active{
+    transition: none !important;
+    -moz-transition: none !important;
 }
