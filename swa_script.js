@@ -40,7 +40,7 @@ function back(){
     document.querySelectorAll('.navlink').forEach(function(a){a.style.color = 'black'});
 }
 
-function win(x,y){
+/*function win(x,y){
     if (x == 1){
         document.getElementById(y).style.opacity = '1';
         document.getElementById(y).style.pointerEvents = 'all';
@@ -48,7 +48,7 @@ function win(x,y){
         document.getElementById(y).style.opacity = '0';
         document.getElementById(y).style.pointerEvents = 'none';
     }
-}
+}*/
 
 const moonlight = SunCalc.getMoonIllumination(new Date())['fraction'];
 document.getElementById('moonlight').innerHTML = Math.round(moonlight * 100);
@@ -61,8 +61,8 @@ function close(){
 
 function open(){
     document.querySelectorAll('.closed').forEach(function(a){a.remove()});
-    document.body.style.background = "#ff";
-    document.body.style.color = "#00";
+    document.body.style.background = "#fff";
+    document.body.style.color = "#000";
 }
 
 if(moonlight >= 0.90 || window.location.href.includes("?open") ){ open() } else { close() };
@@ -75,7 +75,23 @@ function axes(){
 }
 
 $(document).ready(function() {
-    $(".draggable").draggable();
+//    $(".draggable").draggable();
 });
 
 axes();
+
+function win(id, wintitle, posx, posy, w, h){
+    new WinBox({
+        id: id + "_window",
+        html: document.getElementById(id).innerHTML,
+        title: wintitle,
+        x: posx+"px",
+        y: posy+"px",
+        width: w+"px",
+        minwidth: w+"px",
+        maxwidth: w+"px",
+        height: h+"px",
+        minheight: h+"px",
+        maxheight: h+"px",
+    });
+}

@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <link rel="stylesheet" href="https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/css/winbox.min.css">
+        <script src="https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/js/winbox.min.js"></script>
         <script>
             
         </script>
@@ -19,9 +22,9 @@
             moon: <i><span id="moonlight"></span>%</i>
             / 90%
             &nbsp;|&nbsp;
-            <button id="log_button" class="navlink" onclick="win(1,'log')">index</button>
+            <button id="log_button" class="navlink" onclick="win('log','film index',25,55,400,500)">index</button>
             &nbsp;|&nbsp;
-            <button id="map_button" class="navlink" onclick="win(1,'map')">irl</button>
+            <button id="map_button" class="navlink" onclick="win('map','event map',50,100,600,358)">irl</button>
             &nbsp;|&nbsp;
             <button id="repos_button" class="navlink" onclick="axes()">reposition</button>
             <span id="fright">now watching... <b><span id="now_playing"></span></b>.
@@ -35,8 +38,53 @@
             </video>
         </div>
 
+        <div class="container">
+            <div class="main_menu">
+                <img src="comet.gif"/>
+                <p class="closed"><b>☾   swarm archive</b></p>
+                <p><i>swarm axes</i> is a collection of films that are circulated in synchronous, decentralized viewing-swarms. <i>swarm archive</i> is its online counter-part. you can read more about the swarm axes irl events <a target="_blank" href="https://soloshow.online/swarm">here</a>.</p>
+                developed collectively by the <a target="_blank" href="https://soloshow.online">solo show online</a> and A~R~C~A~N~A community.
+                <br>
+
+                <p class="closed">
+                    the <i>swarm archive</i> is open every month <b>around a full moon</b>.<br>check back later ♥
+                </p>
+
+                <p class="open">the swarm archive is now <b>open!</b> ♥</p><br>
+                
+                
+            </div>  
+
+            <div class="video_buttons">
+                <button class="video_selector open" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','「001」 em - fieldnotes/angelvision', 'iframe');">「001」</button><br>
+
+                <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1Ls8bQbkkFLD8eHofSkjMTunWt6qH9gB7/preview','「002」 Lapo Sorride - Left Behind','iframe');">「002」</button><br>
+
+                <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1nZLT6xxfIPRRhq99JLmrgiH9fS1y_39-/preview','「003」 Sybil - Promise','iframe');">「003」</button><br>
+
+                <button class="video_selector open" onclick="video('https://www.bilibili.tv/en/video/4791774933287424','「004」 Sandralub - Ghost Cities','iframe');">「004」</button><br>
+
+                <button class="video_selector open" onclick="video('https://www.youtube.com/embed/zquaqbT2KRs','「005」 Marisol - 𝓭𝓸𝓵𝓵/𝓪𝓬𝓬 🎀 induction sequence 0.1','iframe');">「005」</button><br>
+
+                <button class="video_selector open" onclick="video('https://www.youtube.com/embed/Sg9cmT7L19s','「006」 Marisol - ♡🍧 𝓲𝓷𝓽𝓮𝓻𝓶𝓲𝓼𝓼𝓲𝓸𝓷 ♡🍧','iframe');">「006」</button><br>
+
+                <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1yPLNR1PXVRTBjQvBs5_Dcocmru9P_WQB/preview','「007」 Nikola Balberčáková - Emotional Lipgloss','iframe');">「007」</button><br>
+
+                <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1UpXKoAUCHze2kH-yn7D3MtUFWgVCVAnt/preview','「008」 salt.salome + m.svitlo - SYNUMERU','iframe');">「008」</button><br>
+
+                <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1VFqnD1EVxeFbkpN0LtWoHmLZUStskWXI/preview','「009」 Anna Alexanina - *:･ﾟ✧*:･ﾟ☆○o*✧.*secret cave underwater anime creature reveal*.✧*☆○o*‧͙⁺˚*･༓☾','iframe');">「009」</button><br>
+
+                <button class="video_selector open" onclick="video('https://player.vimeo.com/video/975458237?h=107208c87dw','「010」Paula Pina - Sometimes my vision is blurry 𓇢𓆸','iframe');">「010」</button><br>
+
+                <button class="video_selector open" onclick="video('https://www.youtube.com/embed/gWx3Iqw6vE4','「011」Juan Diego - Core Core failed us','iframe');">「011」</button><br>
+
+                <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1SKVZZHbSvdNB5Rg8o1mOLzHZRx8M2qdV/preview','「012」c_hristian - Backgrounds 1 (2023)','iframe');">「012」</button><br>
+            </div>
+            
+
+        </div>
+
         <div id="log" class="draggable">
-            <button id="log_button" style="float: right;" onclick="win(0,'log')">X</button><br>
             <img src="air.gif" width="200px"/>
             <p><b>「001」</b> em - fieldnotes/angelvision</p>
             <p><b>「002」</b> Lapo Sorride - Left Behind</p>
@@ -55,16 +103,12 @@
         </div>
 
         <div id="map" class="draggable">
-            <button id="log_button" style="float: right;" onclick="win(0,'map')">X</button><br>
-            
-            <img class="dove" onclick="win(1,'us')" style="left: 170px;top: 80px;" src="dove.gif"/>
-            <img class="dove" onclick="win(1,'eu')" style="left: 250px;top: 120px;" src="dove.gif"/>
-            <img class="dove" onclick="win(1,'aus')" style="left: 410px;top: 30px;" src="dove.gif"/>
+            <img class="dove" onclick="win('us','north america',200,200,400,500)" style="left: 170px;top: 80px;" src="dove.gif"/>
+            <img class="dove" onclick="win('eu','europe',400,150,400,500)" style="left: 250px;top: 120px;" src="dove.gif"/>
+            <img class="dove" onclick="win('aus','australia',600,200,400,500)" style="left: 410px;top: 30px;" src="dove.gif"/>
         </div>
 
         <div id="us" class="draggable">
-            <button id="log_button" style="float: right;" onclick="win(0,'us')">X</button><br>
-
             <p><b>north america</b></p>
             <hr/>
             <p><b>「swarm 1」</b><br>NYC - August 11 2023<br>at Love Letter, 147 Thames st Brooklyn<br>hosted by <a href="https://www.instagram.com/loveletter_mag/">@loveletter_mag</a></p>
@@ -77,8 +121,6 @@
         </div>
 
         <div id="eu" class="draggable">
-            <button id="log_button" style="float: right;" onclick="win(0,'eu')">X</button><br>
-
             <p><b>europe</b></p>
             <hr/>
             <p><b>「swarm 1」</b><br>Berlin - August 4 2023<br>hosted by <a href="http://instagram.com/sybil0">@sybil0</a> + <a href="http://instagram.com/madalinagaceanu">@madalinagaceanu</a></p>
@@ -108,8 +150,6 @@
         </div>
 
         <div id="aus" class="draggable">
-            <button id="log_button" style="float: right;" onclick="win(0,'aus')">X</button><br>
-
             <p><b>australia</b></p>
 
             <hr/>
@@ -118,48 +158,6 @@
             <p><b>「swarm 3」</b><br>Mandurah WA - December 22 2023<br>hosted by traumerei_key + <a href="http://instagram.com/catabasis.ilysm">@catabasis.ilysm</a></p>
             
         </div>
-
-        <div class="container">
-
-            <div class="main_menu">
-                <img src="comet.gif"/>
-                <p class="closed"><b>☾   swarm archive</b></p>
-                <p><i>swarm axes</i> is a collection of films that are circulated in synchronous, decentralized viewing-swarms. <i>swarm archive</i> is its online counter-part. you can read more about the swarm axes irl events <a target="_blank" href="https://soloshow.online/swarm">here</a>.</p>
-                developed collectively by the <a target="_blank" href="https://soloshow.online">solo show online</a> and A~R~C~A~N~A community.
-                <br>
-
-                <p class="closed">
-                    the <i>swarm archive</i> is open every month <b>around a full moon</b>.<br>check back later ♥
-                </p>
-
-                <p class="open">the swarm archive is now <b>open!</b> ♥</p><br>              
-            </div>   
-        </div>
-
-        <button class="video_selector open" onclick="video('https://player.vimeo.com/video/948421924?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479','「001」 em - fieldnotes/angelvision', 'iframe');">「001」</button><br>
-
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1Ls8bQbkkFLD8eHofSkjMTunWt6qH9gB7/preview','「002」 Lapo Sorride - Left Behind','iframe');">「002」</button><br>
-
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1nZLT6xxfIPRRhq99JLmrgiH9fS1y_39-/preview','「003」 Sybil - Promise','iframe');">「003」</button><br>
-
-        <button class="video_selector open" onclick="video('https://www.bilibili.tv/en/video/4791774933287424','「004」 Sandralub - Ghost Cities','iframe');">「004」</button><br>
-
-        <button class="video_selector open" onclick="video('https://www.youtube.com/embed/zquaqbT2KRs','「005」 Marisol - 𝓭𝓸𝓵𝓵/𝓪𝓬𝓬 🎀 induction sequence 0.1','iframe');">「005」</button><br>
-
-        <button class="video_selector open" onclick="video('https://www.youtube.com/embed/Sg9cmT7L19s','「006」 Marisol - ♡🍧 𝓲𝓷𝓽𝓮𝓻𝓶𝓲𝓼𝓼𝓲𝓸𝓷 ♡🍧','iframe');">「006」</button><br>
-
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1yPLNR1PXVRTBjQvBs5_Dcocmru9P_WQB/preview','「007」 Nikola Balberčáková - Emotional Lipgloss','iframe');">「007」</button><br>
-
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1UpXKoAUCHze2kH-yn7D3MtUFWgVCVAnt/preview','「008」 salt.salome + m.svitlo - SYNUMERU','iframe');">「008」</button><br>
-
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1VFqnD1EVxeFbkpN0LtWoHmLZUStskWXI/preview','「009」 Anna Alexanina - *:･ﾟ✧*:･ﾟ☆○o*✧.*secret cave underwater anime creature reveal*.✧*☆○o*‧͙⁺˚*･༓☾','iframe');">「009」</button><br>
-
-        <button class="video_selector open" onclick="video('https://player.vimeo.com/video/975458237?h=107208c87dw','「010」Paula Pina - Sometimes my vision is blurry 𓇢𓆸','iframe');">「010」</button><br>
-
-        <button class="video_selector open" onclick="video('https://www.youtube.com/embed/gWx3Iqw6vE4','「011」Juan Diego - Core Core failed us','iframe');">「011」</button><br>
-
-        <button class="video_selector open" onclick="video('https://drive.google.com/file/d/1SKVZZHbSvdNB5Rg8o1mOLzHZRx8M2qdV/preview','「012」c_hristian - Backgrounds 1 (2023)','iframe');">「012」</button><br>
-
 
         <img class="stars open" src="stars.gif"/>
         

@@ -19,14 +19,10 @@ body{
     font-size: 11pt;
     background: #fff;
     color: black;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     height: 100vh;
     width: 100%;
-}
-
-* {
-    filter: blur(0.4px);
-    -webkit-filter: blur(0.4px) !important;
 }
 
 b, i, button {
@@ -47,7 +43,7 @@ a { color: inherit; }
     padding: 10px;
     vertical-align: middle;
     border-bottom: 1px dotted black;
-    z-index: 3;
+    z-index: 1001;
     transition: 1s;
 }
 
@@ -75,6 +71,28 @@ a { color: inherit; }
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+@media only screen and (max-width: 1000px){
+    .video_selector{
+        position: inherit;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .main_menu{
+        width: 70%;
+    }
+
+    .video_buttons{
+        display: flex;
+        width: 85%;
+        flex-wrap: wrap;
+    }
+
+    .stars {
+        display: none;
+    }
 }
 
 .video_selector:hover{
@@ -116,7 +134,7 @@ a { color: inherit; }
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
-    z-index: 2;
+    z-index: 1000;
     opacity: 0;
     display: flex;
     transition: 1s;
@@ -125,40 +143,30 @@ a { color: inherit; }
     pointer-events: none;
 }
 
-#log{
-    position: absolute;
-    top: 100px;
-    left: 80px;
-    width: 400px;
-    height: 500px;
-    padding: 20px;
-    background: white;
-    border: 1px dotted black;
-    z-index: 3;
-    opacity: 0;
-    display: block;
-    transition: 1s;
-    pointer-events: none;
-    overflow-y: scroll;
+.wb-min   { display: none !important }
+.wb-full  { display: none !important }
+.wb-max   { display: none !important }
+.winbox {
+    box-shadow: none !important;
+    border: 1px solid black;
 }
 
-#map{
-    position: absolute;
-    bottom: 100px;
-    left: 80px;
-    width: 600px;
-    height: 358px;
-    padding: 10px;
+#log_window .wb-body, #us_window .wb-body, #eu_window .wb-body, #aus_window .wb-body{
+    padding: 20px;
+}
+
+.wb-header {
+    background: black !important;
+}
+
+#log, #map, #us, #eu, #aus{
+    display: none;
+}
+
+#map_window .wb-body{
     background-image: url('map.jpg');
     background-size: cover;
     background-position: center;
-    border: 1px dotted black;
-    z-index: 3;
-    opacity: 0;
-    display: block;
-    transition: 1s;
-    pointer-events: none;
-    overflow-y: scroll;
 }
 
 #map_img{
@@ -170,56 +178,6 @@ a { color: inherit; }
     cursor: pointer;
 }
 
-#us{
-    position: absolute;
-    top: 200px;
-    left: 200px;
-    width: 400px;
-    height: 500px;
-    padding: 20px;
-    background: white;
-    border: 1px dotted black;
-    z-index: 10;
-    opacity: 0;
-    display: block;
-    transition: 1s;
-    pointer-events: none;
-    overflow-y: scroll;
-}
-
-#eu{
-    position: absolute;
-    top: 150px;
-    left: 400px;
-    width: 400px;
-    height: 500px;
-    padding: 20px;
-    background: white;
-    border: 1px dotted black;
-    z-index: 10;
-    opacity: 0;
-    display: block;
-    transition: 1s;
-    pointer-events: none;
-    overflow-y: scroll;
-}
-
-#aus{
-    position: absolute;
-    top: 200px;
-    left: 600px;
-    width: 400px;
-    height: 500px;
-    padding: 20px;
-    background: white;
-    border: 1px dotted black;
-    z-index: 10;
-    opacity: 0;
-    display: block;
-    transition: 1s;
-    pointer-events: none;
-    overflow-y: scroll;
-}
 
 #i_player, #v_player{
     width: 100vw;
