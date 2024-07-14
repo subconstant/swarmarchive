@@ -222,7 +222,6 @@ a { color: inherit !important; }
     z-index: -100;
 }
 
-.draggable:active{
+.ui-draggable-dragging{
     transition: none !important;
-    -moz-transition: none !important;
 }
