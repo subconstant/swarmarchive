@@ -21,14 +21,22 @@
             &nbsp;|&nbsp;
             moon: <i><span id="moonlight"></span>%</i>
             / 90%
-            &nbsp;|&nbsp;
-            <button id="log_button" class="navlink" onclick="win('log','film index',25,55,400,500)">index</button>
-            &nbsp;|&nbsp;
-            <button id="map_button" class="navlink" onclick="win('map','event map',50,100,600,358)">irl</button>
-            &nbsp;|&nbsp;
-            <button id="repos_button" class="navlink" onclick="axes()">reposition</button>
-            <span id="fright">now watching... <b><span id="now_playing"></span></b>.
-            &nbsp;| <button id="return_button" class="navlink" onclick="back()">return</button></span>
+            <div id="navbuttons">
+                &nbsp;|&nbsp;
+                <button id="log_button" class="navlink" onclick="win('log','film index',25,55,400,500)">index</button>
+                <span class="hide">
+                    &nbsp;|&nbsp;
+                    <button id="map_button" class="navlink" onclick="win('map','event map',50,100,600,358)">irl</button>
+                    &nbsp;|&nbsp;
+                    <button id="repos_button" class="navlink" onclick="axes()">reposition</button>
+                </span>
+            </div>
+            <span id="fright">
+                <span class="hide">
+                    now watching... <b><span id="now_playing"></span></b>. &nbsp;|
+                </span>
+                <button id="return_button" class="navlink" onclick="back()">return</button>
+            </span>
         </div>
 
         <div class="play_window" id="play_window">
@@ -39,10 +47,10 @@
         </div>
 
         <div class="container">
-            <div class="main_menu">
+            <div class="main_text">
                 <img src="comet.gif"/>
                 <p class="closed"><b>☾   swarm archive</b></p>
-                <p><i>swarm axes</i> is a collection of films that are circulated in synchronous, decentralized viewing-swarms. <i>swarm archive</i> is its online counter-part. you can read more about the swarm axes irl events <a target="_blank" href="https://soloshow.online/swarm">here</a>.</p>
+                <p><i>swarm axes</i> is a decentralized short film / video art festival organized in synchronized independent viewing-swarm events. this page serves as an online viewing room and archive of some of the works distributed in the festival. you can read more about the swarm axes irl events <a target="_blank" href="https://soloshow.online/swarm">here</a>.</p>
                 developed collectively by the <a target="_blank" href="https://soloshow.online">solo show online</a> and A~R~C~A~N~A community.
                 <br>
 
@@ -98,8 +106,6 @@
             <p><b>「010」</b>Paula Pina - Sometimes my vision is blurry 𓇢𓆸</p>
             <p><b>「011」</b>Juan Diego - Core Core failed us</p>
             <p><b>「012」</b>c_hristian - Backgrounds 1 (2023)</p>
-
-            <hr/>
         </div>
 
         <div id="map" class="draggable">

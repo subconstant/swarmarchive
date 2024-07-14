@@ -20,6 +20,8 @@ function video(x,y,z){
 
     document.getElementById('fright').style.display = 'block';
     document.getElementById('now_playing').innerHTML = y;
+
+    document.getElementById('navbuttons').style.display = 'none';
 }
 
 function back(){
@@ -38,6 +40,8 @@ function back(){
     document.getElementById('topbar').style.color = 'black';
     document.getElementById('topbar').style.borderColor = 'black';
     document.querySelectorAll('.navlink').forEach(function(a){a.style.color = 'black'});
+
+    document.getElementById('navbuttons').style.display = 'inline';
 }
 
 /*function win(x,y){

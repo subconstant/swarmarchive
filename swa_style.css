@@ -31,11 +31,11 @@ b, i, button {
     animation-iteration-count: infinite;
 }
 
-a { color: inherit; }
+a { color: inherit !important; }
 
 .topbar{
     background: white;
-    position: absolute;
+    position: fixed;
     margin: 0;
     top: 0;
     left: 0;
@@ -45,6 +45,10 @@ a { color: inherit; }
     border-bottom: 1px dotted black;
     z-index: 1001;
     transition: 1s;
+}
+
+#navbuttons{
+    display: inline;
 }
 
 #fright{
@@ -74,10 +78,17 @@ a { color: inherit; }
 }
 
 @media only screen and (max-width: 1000px){
+    .hide {
+        display: none;
+    }
+
     .video_selector{
         position: inherit;
         padding: 10px;
         margin: 10px;
+        height: 70px;
+        width: 70px;
+        background-size: 70px 70px;
     }
 
     .main_menu{
@@ -88,10 +99,23 @@ a { color: inherit; }
         display: flex;
         width: 85%;
         flex-wrap: wrap;
+        padding-bottom: 150px;
     }
 
     .stars {
         display: none;
+    }
+
+    #i_player, #v_player{
+        width: 100vw !important;
+        margin-top: 40px;
+        height: calc(100vh - 40px) !important;
+        max-width: none !important;
+        background: black !important;
+    }
+
+    .main_text{
+        max-width: 80vw !important;
     }
 }
 
@@ -119,12 +143,12 @@ a { color: inherit; }
     padding: 10vh 10vw 0 10vw;
 }
 
-.main_menu{
-    max-width: 500px;
+.main_text{
+    max-width: 600px;
 }
 
 .play_window{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -148,7 +172,9 @@ a { color: inherit; }
 .wb-max   { display: none !important }
 .winbox {
     box-shadow: none !important;
-    border: 1px solid black;
+    border: 1px dotted black;
+    background: white !important;
+    max-width: 80vw;
 }
 
 #log_window .wb-body, #us_window .wb-body, #eu_window .wb-body, #aus_window .wb-body{
