@@ -154,7 +154,7 @@ a { color: inherit !important; }
     width: 100vw;
     height: 100vh;
     background-image: url('frames/frame\ \(10\).jpeg');
-    background-size: 70vw 80vh;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
