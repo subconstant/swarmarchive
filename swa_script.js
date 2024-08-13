@@ -55,7 +55,7 @@ function back(){
 }*/
 
 const moonlight = SunCalc.getMoonIllumination(new Date())['fraction'];
-document.getElementById('moonlight').innerHTML = Math.round(moonlight * 100);
+
 
 function close(){
     document.querySelectorAll('.open').forEach(function(a){a.remove()});
@@ -99,3 +99,5 @@ function win(id, wintitle, posx, posy, w, h){
         maxheight: h+"px",
     });
 }
+
+document.getElementById('moonlight').innerHTML = Math.round(moonlight * 100);

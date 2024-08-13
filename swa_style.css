@@ -147,6 +147,10 @@ a { color: inherit !important; }
     max-width: 600px;
 }
 
+.main_text img{
+    max-height: 100px;
+}
+
 .play_window{
     position: fixed;
     top: 0;
@@ -217,7 +221,8 @@ a { color: inherit !important; }
 
 .stars{
     position: absolute;
-    bottom: 20px;
+    max-width: 400px;
+    bottom: 0px;
     right: 20px;
     z-index: -100;
 }
