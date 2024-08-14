@@ -148,7 +148,7 @@ a { color: inherit !important; }
 }
 
 .main_text img{
-    max-height: 100px;
+    max-height: 70px;
 }
 
 .play_window{
@@ -221,10 +221,21 @@ a { color: inherit !important; }
 
 .stars{
     position: absolute;
-    max-width: 400px;
-    bottom: 0px;
+    max-width: 700px;
+    bottom: 50px;
     right: 20px;
     z-index: -100;
+    pointer-events: none;
+}
+
+.memin{
+  position: absolute;
+  max-width: 1000px;
+  bottom: 0;
+  left: 20px;
+  opacity: 0.1;
+  z-index: -100;
+  pointer-events: none;
 }
 
 .ui-draggable-dragging{
